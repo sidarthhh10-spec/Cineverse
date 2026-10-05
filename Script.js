@@ -1,4 +1,3 @@
-// Movie data
 const movies = [
     {
         title: "Avengers: Endgame",
@@ -26,10 +25,8 @@ const movies = [
     }
 ];
 
-// Movie container
 const movieContainer = document.getElementById("movieContainer");
 
-// Display movies
 function displayMovies(movieList) {
     movieContainer.innerHTML = "";
 
@@ -50,5 +47,4 @@ function displayMovies(movieList) {
     });
 }
 
-// Show movies
 displayMovies(movies);
