@@ -92,3 +92,8 @@ movieModal.addEventListener("click", (event) => {
         movieModal.style.display = "none";
     }
 });
+const watchButton = document.getElementById("watchButton");
+
+watchButton.addEventListener("click", () => {
+    alert("Watch feature coming soon!");
+});
