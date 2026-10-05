@@ -148,3 +148,65 @@ header {
 #searchInput::placeholder {
     color: #888;
 }
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 400px;
+    background: #181818;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+
+#modalImage {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#modalTitle {
+    color: white;
+    margin: 15px 0 8px;
+}
+
+#modalInfo {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: #222;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#watchButton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #e50914;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
