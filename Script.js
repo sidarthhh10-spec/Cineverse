@@ -48,3 +48,14 @@ function displayMovies(movieList) {
 }
 
 displayMovies(movies);
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("input", () => {
+    const searchText = searchInput.value.toLowerCase();
+
+    const filteredMovies = movies.filter(movie =>
+        movie.title.toLowerCase().includes(searchText)
+    );
+
+    displayMovies(filteredMovies);
+});
