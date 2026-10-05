@@ -4,113 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CineVerse</title>
+    <title>MovieHub</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Navbar -->
     <header class="navbar">
-    <h1>MovieHub</h1>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Movies</a>
-        <a href="#">Series</a>
-    </nav>
-    </header>
-    <section class="hero">
-    <div class="hero-content">
-        <h2>Unlimited Movies & Series</h2>
-        <p>Watch your favorite movies and discover new stories.</p>
-        <button onclick="document.getElementById('movieContainer').scrollIntoView()">
-            Explore Movies
-        </button>
-    </div>
-</section>
-    <div class="search-box">
-    <input 
-        type="text" 
-        id="searchInput" 
-        placeholder="Search movies..."
-    >
-    </div>
-    <div id="movieContainer"></div>
-    <div id="movieModal" class="modal">
-    <div class="modal-content">
-        <button id="closeModal">✕</button>
-
-        <img id="modalImage" src="" alt="Movie">
-
-        <h2 id="modalTitle"></h2>
-        <p id="modalInfo"></p>
-
-        <button id="watchButton">Watch Now</button>
-    </div>
-    </div>
-
-    <header class="navbar">
-        <div class="logo">Cine<span>Verse</span></div>
+        <h1>MovieHub</h1>
 
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Movies</a>
-            <a href="#">Series</a>
+            <a href="#home">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#series">Series</a>
         </nav>
     </header>
 
 
-    <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="small-title">WELCOME TO MOVIEHUB</p>
 
-        <section class="hero">
-            <div class="hero-content">
-                <p class="tag">WELCOME TO CINEVERSE</p>
+            <h2>Unlimited Movies & Series</h2>
 
-                <h1>Discover Your Next Favorite Movie</h1>
+            <p>
+                Discover popular movies, exciting stories
+                and your next favorite watch.
+            </p>
 
-                <p>
-                    Explore movies and TV series, ratings, genres,
-                    trailers and more.
-                </p>
-
-                <button>Explore Now</button>
-            </div>
-        </section>
+            <button onclick="scrollToMovies()">
+                Explore Movies
+            </button>
+        </div>
+    </section>
 
 
-        <section class="section">
-            <h2>🔥 Trending</h2>
+    <!-- Search -->
+    <section class="search-section">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search movies..."
+        >
+    </section>
 
-            <div class="movie-grid">
 
-                <div class="movie-card">
-                    <div class="poster">MOVIE</div>
-                    <h3>Movie Title</h3>
-                    <p>⭐ 8.5</p>
-                </div>
+    <!-- Movies -->
+    <main id="movies">
 
-                <div class="movie-card">
-                    <div class="poster">MOVIE</div>
-                    <h3>Movie Title</h3>
-                    <p>⭐ 8.2</p>
-                </div>
+        <div class="section-title">
+            <h2>Popular Movies</h2>
+            <p>Discover something new to watch</p>
+        </div>
 
-                <div class="movie-card">
-                    <div class="poster">SERIES</div>
-                    <h3>Series Title</h3>
-                    <p>⭐ 9.0</p>
-                </div>
-
-            </div>
-        </section>
+        <div id="movieContainer"></div>
 
     </main>
 
 
+    <!-- Movie Details Modal -->
+    <div id="movieModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-button">
+                ×
+            </button>
+
+            <img
+                id="modalImage"
+                src=""
+                alt="Movie Poster"
+            >
+
+            <div class="modal-info">
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalInfo"></p>
+
+                <p id="modalDescription"></p>
+
+                <button id="watchButton" class="watch-button">
+                    Watch Trailer
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 CineVerse</p>
+        <p>© 2026 MovieHub. All rights reserved.</p>
     </footer>
-    
-<script src="script.js"></script>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
