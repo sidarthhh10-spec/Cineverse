@@ -59,3 +59,36 @@ searchInput.addEventListener("input", () => {
 
     displayMovies(filteredMovies);
 });
+const movieModal = document.getElementById("movieModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalInfo = document.getElementById("modalInfo");
+const closeModal = document.getElementById("closeModal");
+
+movieContainer.addEventListener("click", (event) => {
+    const card = event.target.closest(".movie-card");
+
+    if (!card) return;
+
+    const title = card.querySelector("h3").textContent;
+
+    const movie = movies.find(movie => movie.title === title);
+
+    if (!movie) return;
+
+    modalImage.src = movie.image;
+    modalTitle.textContent = movie.title;
+    modalInfo.textContent = `${movie.year} • ${movie.genre}`;
+
+    movieModal.style.display = "flex";
+});
+
+closeModal.addEventListener("click", () => {
+    movieModal.style.display = "none";
+});
+
+movieModal.addEventListener("click", (event) => {
+    if (event.target === movieModal) {
+        movieModal.style.display = "none";
+    }
+});
