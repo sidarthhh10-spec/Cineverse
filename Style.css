@@ -241,3 +241,41 @@ header {
 .navbar nav a:hover {
     color: white;
 }
+.hero {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.9)
+    );
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 38px;
+    margin: 0 0 15px;
+}
+
+.hero p {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.hero button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #e50914;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
