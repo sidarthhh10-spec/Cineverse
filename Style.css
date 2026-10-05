@@ -129,3 +129,22 @@ header {
     color: #aaa;
     font-size: 13px;
 }
+.search-box {
+    padding: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: #888;
+}
