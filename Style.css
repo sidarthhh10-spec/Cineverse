@@ -4,227 +4,40 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: #0b0b0f;
-    color: white;
     font-family: Arial, sans-serif;
-}
-
-header {
-    padding: 18px;
-    background: #111116;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.search {
-    background: #1c1c23;
-    border: none;
-    outline: none;
+    background: #0b0b0b;
     color: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-    width: 150px;
 }
 
-.hero {
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #191923, #09090c);
-}
 
-.hero h1 {
-    font-size: 34px;
-    margin-bottom: 10px;
-}
+/* =========================
+   NAVBAR
+========================= */
 
-.hero p {
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background: white;
-    color: black;
-    padding: 11px 20px;
-    border: none;
-    border-radius: 20px;
-    font-weight: bold;
-}
-
-.section {
-    padding: 25px 15px;
-}
-
-.section h2 {
-    margin-bottom: 15px;
-}
-
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.movie-card {
-    background: #15151b;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.movie-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.movie-card h3 {
-    padding: 10px;
-    font-size: 16px;
-}
-
-.movie-card p {
-    padding: 0 10px 10px;
-    color: #888;
-    font-size: 13px;
-}
-#movieContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 20px;
-}
-
-.movie-card {
-    background: #181818;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.movie-card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    display: block;
-}
-
-.movie-info {
-    padding: 10px;
-}
-
-.movie-info h3 {
-    margin: 0 0 5px;
-    color: white;
-    font-size: 16px;
-}
-
-.movie-info p {
-    margin: 0;
-    color: #aaa;
-    font-size: 13px;
-}
-.search-box {
-    padding: 20px;
-}
-
-#searchInput {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 14px 16px;
-    border: none;
-    border-radius: 8px;
-    background: #222;
-    color: white;
-    font-size: 16px;
-    outline: none;
-}
-
-#searchInput::placeholder {
-    color: #888;
-}
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    z-index: 1000;
-}
-
-.modal-content {
-    width: 100%;
-    max-width: 400px;
-    background: #181818;
-    border-radius: 12px;
-    padding: 20px;
-    box-sizing: border-box;
-    position: relative;
-    text-align: center;
-}
-
-#modalImage {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-#modalTitle {
-    color: white;
-    margin: 15px 0 8px;
-}
-
-#modalInfo {
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-#closeModal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: #222;
-    color: white;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-#watchButton {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 7px;
-    background: #e50914;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
 .navbar {
+    height: 65px;
+    padding: 0 20px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    justify-content: space-between;
+
     background: #111;
+
     position: sticky;
     top: 0;
-    z-index: 500;
+
+    z-index: 100;
 }
 
 .navbar h1 {
-    margin: 0;
-    color: white;
     font-size: 24px;
+    color: #e50914;
 }
 
 .navbar nav {
@@ -241,41 +54,389 @@ header {
 .navbar nav a:hover {
     color: white;
 }
+
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
-    min-height: 350px;
+    min-height: 400px;
+
     display: flex;
     align-items: center;
-    padding: 30px 20px;
-    box-sizing: border-box;
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.65),
-        rgba(0, 0, 0, 0.9)
-    );
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.95)
+        ),
+        url("https://image.tmdb.org/t/p/original/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg");
+
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content {
     max-width: 600px;
 }
 
+.small-title {
+    color: #e50914;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 .hero h2 {
-    color: white;
-    font-size: 38px;
-    margin: 0 0 15px;
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    color: #bbb;
-    font-size: 16px;
-    line-height: 1.5;
+    color: #ccc;
+    line-height: 1.6;
 }
 
 .hero button {
-    margin-top: 15px;
-    padding: 12px 20px;
+    margin-top: 20px;
+
+    padding: 13px 22px;
+
     border: none;
     border-radius: 6px;
+
     background: #e50914;
     color: white;
+
     font-size: 15px;
+    font-weight: bold;
+
     cursor: pointer;
 }
+
+.hero button:hover {
+    background: #b20710;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section {
+    padding: 25px 20px 10px;
+}
+
+#searchInput {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    background: #1c1c1c;
+
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #e50914;
+}
+
+#searchInput::placeholder {
+    color: #777;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    padding: 25px 20px 15px;
+}
+
+.section-title h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MOVIE GRID
+========================= */
+
+#movieContainer {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+
+    padding: 10px 20px 40px;
+}
+
+
+/* =========================
+   MOVIE CARD
+========================= */
+
+.movie-card {
+    background: #171717;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    background: #202020;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.movie-info {
+    padding: 12px;
+}
+
+.movie-info h3 {
+    font-size: 16px;
+
+    margin-bottom: 7px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-info p {
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 420px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #181818;
+
+    border-radius: 12px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+#modalImage {
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.modal-info {
+    padding: 20px;
+}
+
+.modal-info h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+#modalInfo {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+#modalDescription {
+    color: #ccc;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.close-button {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.watch-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #e50914;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.watch-button:hover {
+    background: #b20710;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: #111;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .navbar h1 {
+        font-size: 21px;
+    }
+
+    .navbar nav {
+        gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .movie-card img {
+        height: 220px;
+    }
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 700px) {
+
+    #movieContainer {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+
+        max-width: 1200px;
+
+        margin: auto;
+    }
+
+    .search-section,
+    .section-title {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+}    
